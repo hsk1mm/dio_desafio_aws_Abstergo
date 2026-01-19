@@ -43,4 +43,4 @@ e a produtividade da empresa. Recomenda-se a continuidade da utilização das fe
 
 Assinatura do Responsável pelo Projeto: "
 
-[Nome do ResponsÃ¡vel pelo Projeto]
+[Nome do Responsável pelo Projeto]
