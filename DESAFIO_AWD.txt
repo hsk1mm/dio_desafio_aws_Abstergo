@@ -1,0 +1,47 @@
+## RELATÓRIO DE IMPLEMENTAÇÃO DE SERVIÇOS AWS
+
+Data:** 19/01/2026
+Empresa: Abstergo Industries 
+Responsável: Hyung Sub Kim
+
+## Introdução
+
+Este relatório apresenta o processo de implementação de ferramentas na empresa Abstergo Industries, realizado por Hyung Sub Kim. O objetivo do projeto foi elencar 3 serviços AWS abordados na análise de infraestrutura, com a finalidade de realizar diminuição de custos imediatos e ganho de eficiência.
+
+## Descrição do Projeto
+
+O projeto de implementação de ferramentas foi dividido em 3 etapas, focando em otimização de persistência de dados:
+
+Etapa 1:
+
+- Amazon S3 (Simple Storage Service)
+- Foco da ferramenta: Armazenamento de objetos escalável com gestão de ciclo de vida.
+- Descrição de caso de uso: Migração de backups e arquivos estáticos (vídeos de 60-80GB) que estavam em volumes EBS para o S3. Isso reduz o custo de armazenamento por GB e utiliza políticas de ciclo de vida para mover dados antigos para classes de arquivo, eliminando gastos com provisionamento fixo de discos.
+
+Etapa 2:
+
+- Amazon DynamoDB com DAX (DynamoDB Accelerator)
+- Foco da ferramenta: Banco de dados NoSQL com camada de cache integrada.
+- Descrição de caso de uso: Implementação do DynamoDB para tabelas de metadados e atributos, utilizando o DAX para reduzir a latência de milissegundos para microssegundos. Isso permite reduzir o provisionamento de leitura (RCUs) da tabela principal, diminuindo o custo operacional enquanto melhora a resposta da aplicação.
+
+Etapa 3:
+
+- Amazon RDS (Relational Database Service)
+- Foco da ferramenta: Banco de dados relacional gerenciado com alta disponibilidade.
+- Descrição de caso de uso: Migração de bancos de dados MySQL/PostgreSQL rodando em instâncias EC2 manuais para o RDS. A economia vem da redução do tempo de gerência (patches e backups automáticos) e do uso de instâncias reservadas ou Multi-AZ para evitar prejuízos financeiros por downtime (recuperação de desastres).
+
+## Conclusão
+
+A implementação destas ferramentas na Abstergo Industries visa a consolidação de uma infraestrutura de dados resiliente e econômica. Ao mover arquivos grandes para o S3, otimizar consultas NoSQL com DAX e automatizar a gestão de bancos relacionais com RDS, a empresa elimina gargalos de performance e reduz drasticamente o desperdício de recursos. Recomenda-se a continuidade da utilização destas ferramentas e o monitoramento contínuo através da Calculadora de Preços da AWS para futuras expansões.
+
+## Anexos
+
+1 - Documentação Amazon S3: 
+	URL: https://aws.amazon.com/s3/
+2 - Guia do Amazon DynamoDB Accelerator (DAX): 
+	URL: https://aws.amazon.com/dynamodb/dax/
+3 - Página de Recursos do Amazon RDS:
+	URL: https://aws.amazon.com/rds/
+
+Assinatura do Responsável pelo Projeto:
+Hyung Sub Kim
